@@ -11,4 +11,4 @@ Run in CPU:
     docker run --rm -v C:\Users\zyf13\Desktop\test\DOCKER-EXAMPLE\code:/app zyf0706/cv-pytorch:0.0.3 python /app/main.py
 
 Work with Jupyter Notebook:
-    docker run -p 8888:8888 -v C:\Users\zyf13\Desktop\test\DOCKER-EXAMPLE\code:/app zyf0706/cv-pytorch:0.0.3
+    docker run --gpus all -p 8888:8888 -v C:\Users\zyf13\Desktop\test\DOCKER-EXAMPLE\code:/app zyf0706/cv-pytorch:0.0.3
