@@ -1,9 +1,10 @@
 FROM python:3.8-slim-buster
 
 RUN apt-get update && apt-get install -y \
-    git python3-opencv \
+    git ffmpeg libsm6 libxext6 \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install --no-cache-dir opencv-python
 RUN pip install --no-cache-dir torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 RUN pip install --no-cache-dir jupyter
 RUN pip install --no-cache-dir matplotlib 
