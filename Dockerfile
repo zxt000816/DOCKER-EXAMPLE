@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 
 RUN apt-get update && apt-get install -y \
-    git ffmpeg libsm6 libxext6 \
+    git ffmpeg libsm6 libxext6 gcc \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir opencv-python
@@ -15,6 +15,10 @@ RUN pip install --no-cache-dir pandas
 RUN pip install --no-cache-dir plotly
 RUN pip install --no-cache-dir scipy
 RUN pip install --no-cache-dir seaborn
+RUN pip install --no-cache-dir albumentations
+RUN pip install --no-cache-dir tqdm
+RUN pip install --no-cache-dir cython
+RUN pip install --no-cache-dir git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
 
 
 WORKDIR /app
