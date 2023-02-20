@@ -1,8 +1,8 @@
 Create image:
-     docker build -t zyf0706/cv-pytorch:0.0.4 .
+    docker build -t zyf0706/cv-pytorch:0.0.4 .
 
 Pull image:
-     docker tag <image name> <user name>/<image name>:<version>        
+    docker tag <image name> <user name>/<image name>:<version>        
 
 Run in GPU:
     docker run --rm --gpus all -v C:\Users\zyf13\Desktop\test\DOCKER-EXAMPLE\code:/app zyf0706/cv-pytorch:0.0.4 python /app/main.py
